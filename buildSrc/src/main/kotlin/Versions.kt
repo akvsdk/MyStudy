@@ -1,4 +1,4 @@
-
+import kotlin.String
 import org.gradle.plugin.use.PluginDependenciesSpec
 import org.gradle.plugin.use.PluginDependencySpec
 
@@ -12,52 +12,55 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
-    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.3" // available: "1.3.3"
+    const val org_jetbrains_kotlinx_kotlinx_coroutines: String = "1.3.5"
+             // available: "1.3.5-1.4-M1-release-99"
 
-    const val com_github_bumptech_glide: String = "4.11.0" // available: "4.11.0"
+    const val com_github_bumptech_glide: String = "4.11.0"
 
-    const val com_squareup_retrofit2: String = "2.7.1" // available: "2.7.1"
+    const val com_squareup_retrofit2: String = "2.8.1"
 
-    const val com_squareup_okhttp3: String = "4.3.1" // available: "4.3.1"
+    const val com_squareup_okhttp3: String = "4.5.0"
 
-    const val org_jetbrains_kotlin: String = "1.3.61" // available: "1.3.61"
+    const val org_jetbrains_kotlin: String = "1.3.61" // available: "1.3.72"
 
-    const val androidx_lifecycle: String = "2.2.0-alpha01"
+    const val androidx_lifecycle: String = "2.2.0"
 
-    const val com_android_tools_build_gradle: String = "3.5.3"
+    const val com_android_tools_build_gradle: String = "3.6.3"
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
-    const val baserecyclerviewadapterhelper: String = "3.0.0-beta11"
+    const val baserecyclerviewadapterhelper: String = "3.0.0-beta11" // available: "3.0.3"
+
+    const val swiperefreshlayout: String = "1.0.0"
 
     const val constraintlayout: String = "1.1.3"
 
     const val progressmanager: String = "1.5.0"
 
-    const val recyclerview: String = "1.1.0-beta01" // available: "1.1.0"
+    const val recyclerview: String = "1.1.0"
 
-    const val lint_gradle: String = "26.5.3"
+    const val lint_gradle: String = "26.6.3"
 
     const val appcompat: String = "1.1.0"
 
-    const val core_ktx: String = "1.1.0"
+    const val core_ktx: String = "1.2.0"
 
-    const val material: String = "1.0.0"
-
-    const val saf_log: String = "1.5.6"
-
-    const val aapt2: String = "3.5.3-5435860"
+    const val material: String = "1.1.0"
 
     const val multidex: String = "2.0.1"
 
-    const val xui: String = "1.1.2" // available: "1.1.2"
+    const val saf_log: String = "1.5.6"
+
+    const val aapt2: String = "3.6.3-6040484"
+
+    const val xui: String = "1.1.3"
 
     /**
-     * Current version: "5.4.1"
+     * Current version: "6.3"
      * See issue 19: How to update Gradle itself?
      * https://github.com/jmfayard/buildSrcVersions/issues/19
      */
-    const val gradleLatestVersion: String = "6.1"
+    const val gradleLatestVersion: String = "6.3"
 }
 
 /**

@@ -52,6 +52,7 @@ dependencies {
     //implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation(Libs.kotlinx_coroutines_core)
     implementation(Libs.appcompat)
+    implementation(Libs.swiperefreshlayout)
 
 
     implementation(Libs.xui)
