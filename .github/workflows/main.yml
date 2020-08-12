@@ -35,9 +35,13 @@ jobs:
           # 设置参数
           java-version: 1.8
       # step：打包apk
-      - name: Build with Gradle
+      - name: Run Gradle command
+        uses: Raul6469/android-gradle-action@2.0.0
+        with:
+          script: assembleDebug
+      # - name: Build with Gradle
         # 运行命令
-        run: chmod +x gradlew &&./gradlew assembleDebug
+      #   run: chmod +x gradlew &&./gradlew assembleDebug
             #step： 获取apk版本号
       - name: Get Apk Info
         #step id
