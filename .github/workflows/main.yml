@@ -5,6 +5,13 @@ on:
   #     - master
   # schedule:
   #   - cron: 0 16 * * 6
+  push:
+  # 在指定的远程分支上，发生推送
+   branches:
+      - master
+  # 指定文件发生修改
+   paths:
+      - 'config.gradle'
   watch:
     types: started
 
@@ -16,11 +23,35 @@ jobs:
     name: Build Release apk
     runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    - uses: vgaidarji/android-github-actions-build@v1.0.1
-      with:
-       args: "gradle assembleDebug"
+     # 下面是多个step ，每个以“-”开头
+      # step：检查分支
+      - uses: actions/checkout@v1
+      # step：设置jdk版本
+      # step 名称
+      - name: set up JDK 1.8
+        # 引用公共action
+        uses: actions/setup-java@v1
+        with:
+          # 设置参数
+          java-version: 1.8
+      # step：打包apk
+      - name: Build with Gradle
+        # 运行命令
+        run: chmod +x gradlew &&./gradlew assembleDebug
+            #step： 获取apk版本号
+      - name: Get Apk Info
+        #step id
+        id: apk
+        uses: JantHsueh/get-apk-info-action@master
+        with:
+          apkPath: app/build/outputs/apk/debug/xw-debug.apk
+
+        #获取指定时区的时间
+      - name: Get Time
+        id: time
+        uses: JantHsueh/get-time-action@master
+        with:
+          timeZone: 8
 
 
 
