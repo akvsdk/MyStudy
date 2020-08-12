@@ -21,8 +21,9 @@ jobs:
     - uses: vgaidarji/android-github-actions-build@v1.0.1
       with:
        args: "./gradle assembleDebug"
-    - name: "Build Release on Github" 
+
     - uses: ncipollo/release-action@v1
+    - name: "Build Release on Github" 
       with:
         artifacts: "release.tar.gz,foo/*.txt"
         bodyFile: "body.md"
