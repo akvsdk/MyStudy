@@ -22,11 +22,5 @@ jobs:
       with:
        args: "./gradle assembleDebug"
 
-    - uses: ncipollo/release-action@v1
-    - name: "Build Release on Github" 
-      with:
-        artifacts: "release.tar.gz,foo/*.txt"
-        bodyFile: "body.md"
-        token: ${{ secrets.CI }}
 
 
