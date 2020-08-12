@@ -46,8 +46,6 @@ captures/
 
 /seal/objectbox-models
 ajcore.*
-/gradle/
-/gradlew.bat
 /seal/debug/output.json
 /seal/release/output.json
 /git
