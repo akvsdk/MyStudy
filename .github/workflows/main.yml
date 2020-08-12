@@ -10,13 +10,11 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    name: Build Release apk
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - name: "Build Android project"
     - uses: vgaidarji/android-github-actions-build@v1.0.1
       with:
        args: "./gradlew assembleDebug"
