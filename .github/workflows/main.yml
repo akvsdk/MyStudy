@@ -28,9 +28,17 @@ jobs:
       - uses: actions/checkout@v1
       - name: Android Github Action
         uses: Vukan-Markovic/Github-Android-Action@1.2
-      - name: Create a Release APK
-        uses: ncipollo/release-action@v1
+      #step： 获取apk版本号
+      - name: Get Apk Info
+        #step id
+        id: apk
+        uses: JantHsueh/get-apk-info-action@master
         with:
-            artifacts: "build/app/outputs/apk/debug/*.apk"
-            token: ${{ secrets.CI }}
+          apkPath: app/build/outputs/apk/debug/*.apk
 
+        #获取指定时区的时间
+      - name: Get Time
+        id: time
+        uses: JantHsueh/get-time-action@master
+        with:
+          timeZone: 8
